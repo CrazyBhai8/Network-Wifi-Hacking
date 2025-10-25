@@ -1,3 +1,4 @@
+```
 """
 This script implements an sslstrip-like attack based on mitmproxy.
 https://moxie.org/software/sslstrip/
@@ -62,3 +63,4 @@ def response(flow):
     if cookies:
         cookies = [re.sub(r";\s*secure\s*", "", s, flags=re.IGNORECASE) for s in cookies]
         flow.response.headers.set_all("Set-Cookie", cookies)
+```
